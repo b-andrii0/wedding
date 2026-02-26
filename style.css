@@ -493,6 +493,7 @@ section {
   max-width: 480px;
   text-align: center;
   font-weight: 300;
+   margin-top: 40px;
   margin-bottom: 44px;
 }
 
@@ -813,3 +814,4 @@ input[type="radio"]:checked + .toggle-btn {
     height: 260px;
   }
 }
+
