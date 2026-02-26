@@ -136,7 +136,7 @@ section {
 
 .hero-subtitle {
   font-family: 'Jost', sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-light);
@@ -173,7 +173,7 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(18px, 4vw, 26px);
   font-style: italic;
-  color: var(--text-light);
+  color: black;
   letter-spacing: 0.1em;
   margin-top: 36px;
   opacity: 0;
@@ -679,6 +679,24 @@ section {
   font-size: 40px;
   color: var(--sage-dark);
   margin-top: 20px;
+}
+
+.toggle-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1.5px solid var(--sage-mid);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.25s;
+  user-select: none;
+}
+
+input[type="radio"]:checked + .toggle-btn {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: #fff;
 }
 
 /* ══════════════════════════════════════
