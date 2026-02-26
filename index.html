@@ -465,8 +465,8 @@ form.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
 
   const formData = new FormData(form);
-  formData.append('access_key', 'c71270ac-e455-4b8d-8260-fee36931157f');
-
+ formData.append("access_key", "c71270ac-e455-4b8d-8260-fee36931157f");
+  
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -511,4 +511,5 @@ form.addEventListener('submit', async (e) => {
 
 </body>
 </html>
+
 
