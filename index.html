@@ -239,43 +239,30 @@
 
   <div class="section-heading reveal">Дресс-код</div>
 
-  <p class="dc-desc reveal">
-    Будем признательны, если при выборе нарядов вы поддержите
-    нежную весеннюю палитру нашего праздника:
-  </p>
-
-  <div class="color-palettes reveal">
-    <div>
-      <div class="palette-group-label">Зелёные оттенки</div>
-      <div class="palette-row">
-        <div class="color-swatch">
-          <div class="swatch-circle" style="background: #666956"></div>
-          <div class="swatch-name">Шалфей</div>
-        </div>
-        <div class="color-swatch">
-          <div class="swatch-circle" style="background: #8D8E7C"></div>
-          <div class="swatch-name">Серо-зелёный</div>
-        </div>
-      </div>
+  <div class="palette-row reveal">
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #666956"></div>
+      <div class="swatch-name">Шалфей</div>
     </div>
-    <div>
-      <div class="palette-group-label">Розовые оттенки</div>
-      <div class="palette-row">
-        <div class="color-swatch">
-          <div class="swatch-circle" style="background: #B08A81"></div>
-          <div class="swatch-name">Пыльная роза</div>
-        </div>
-        <div class="color-swatch">
-          <div class="swatch-circle" style="background: #EFBFBB"></div>
-          <div class="swatch-name">Нежный персик</div>
-        </div>
-        <div class="color-swatch">
-          <div class="swatch-circle" style="background: #FFE5E4; border: 1px solid #e0d0cf"></div>
-          <div class="swatch-name">Светлый пастельный</div>
-        </div>
-      </div>
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #8D8E7C"></div>
+      <div class="swatch-name">Серо-зелёный</div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #EFBFBB"></div>
+      <div class="swatch-name">Нежный персик</div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-circle" style="background: #FFE5E4; border: 1px solid #e0d0cf"></div>
+      <div class="swatch-name">Светлый пастельный</div>
     </div>
   </div>
+
+  <p class="dc-desc reveal">
+    Будем признательны, если при выборе нарядов вы поддержите
+    нежную весеннюю палитру нашего праздника.
+  </p>
+
 </section>
 
 
@@ -465,7 +452,7 @@ form.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
 
   const formData = new FormData(form);
-  
+
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
@@ -510,6 +497,3 @@ form.addEventListener('submit', async (e) => {
 
 </body>
 </html>
-
-
-
