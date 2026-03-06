@@ -119,9 +119,10 @@ section {
 ══════════════════════════════════════ */
 #hero {
   min-height: 100vh;
-  background: var(--cream);
+  background: url('satin-bg.jpg') center center / cover no-repeat;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 60px 24px 56px;
   overflow: hidden;
 }
 
@@ -134,13 +135,28 @@ section {
 .floral-corner.bl { bottom: 0; left: 0; transform: scaleY(-1); }
 .floral-corner.br { bottom: 0; right: 0; transform: scale(-1, -1); }
 
+.hero-top {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-bottom {
+  width: 100%;
+  text-align: center;
+}
+
 .hero-subtitle {
   font-family: 'Jost', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.22em;
+  font-size: 13px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--text-light);
-  margin-bottom: 32px;
+  color: rgba(80, 68, 60, 0.75);
   opacity: 0;
   animation: fadeUp 1s ease 0.3s forwards;
 }
@@ -160,55 +176,23 @@ section {
 
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 8vw, 56px);
-  color: var(--blush);
+  font-size: clamp(30px, 7vw, 44px);
+  color: var(--sage-dark);
   font-weight: 300;
   display: block;
-  margin: 4px 0;
+  margin: 2px 0;
   opacity: 0;
   animation: fadeUp 1s ease 0.9s forwards;
 }
 
 .hero-date {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(18px, 4vw, 26px);
+  font-size: clamp(17px, 4vw, 24px);
   font-style: italic;
-  color: black;
-  letter-spacing: 0.1em;
-  margin-top: 36px;
+  color: var(--text);
+  letter-spacing: 0.12em;
   opacity: 0;
   animation: fadeUp 1s ease 1.2s forwards;
-}
-
-.hero-date span {
-  color: var(--gold);
-  margin: 0 8px;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  animation: fadeUp 1s ease 2s forwards;
-}
-
-.scroll-hint span {
-  font-family: 'Jost', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-light);
-}
-
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--text-light), transparent);
-  animation: scrollPulse 2s ease infinite;
 }
 
 /* ══════════════════════════════════════
@@ -329,75 +313,22 @@ section {
    ДАТА И МЕСТО
 ══════════════════════════════════════ */
 #date-place {
-  background: var(--cream);
+  background: var(--paper);
   text-align: center;
 }
 
-.cal-month {
-  font-family: 'Great Vibes', cursive;
-  font-size: 52px;
-  color: var(--sage-dark);
-  margin-bottom: 20px;
-}
-
-.cal-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 40px);
-  gap: 4px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 15px;
-  color: var(--text);
-  margin-bottom: 52px;
-}
-
-.cal-day-header {
-  font-family: 'Jost', sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  text-align: center;
-  padding-bottom: 8px;
-}
-
-.cal-day {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.cal-day.wedding {
-  background: var(--sage);
-  color: #fff;
-  font-weight: 500;
-  position: relative;
-}
-
-.cal-day.wedding::after {
-  content: '♥';
-  position: absolute;
-  bottom: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 10px;
-  color: var(--blush);
-}
-
-.venue-sketch {
-  width: 220px;
+.venue-map {
+  width: 260px;
   margin: 0 auto 24px;
-  opacity: 0.65;
+  opacity: 0.75;
   display: block;
 }
 
 .place-label {
   font-family: 'Great Vibes', cursive;
-  font-size: 34px;
-  color: var(--sage);
-  margin-bottom: 14px;
+  font-size: 44px;
+  color: var(--sage-dark);
+  margin-bottom: 24px;
 }
 
 .address {
@@ -438,9 +369,11 @@ section {
 
 .timer-label {
   font-family: 'Great Vibes', cursive;
-  font-size: 38px;
+  font-size: clamp(36px, 9vw, 52px);
   color: var(--sage-dark);
   margin-bottom: 8px;
+  max-width: 320px;
+  line-height: 1.2;
 }
 
 .timer-sub {
@@ -479,7 +412,7 @@ section {
 
 .ct-sep {
   font-size: 42px;
-  color: var(--blush);
+  color: var(--sage-dark);
   line-height: 1;
   padding-top: 6px;
   font-weight: 300;
@@ -804,15 +737,6 @@ input[type="radio"]:checked + .toggle-btn {
 @media (max-width: 600px) {
   :root {
     --section-pad: 60px 20px;
-  }
-
-  .cal-grid {
-    grid-template-columns: repeat(7, 36px);
-  }
-
-  .cal-day {
-    width: 36px;
-    height: 36px;
   }
 
   /* На мобильном вертикальные фото — полная ширина без ограничения высоты */
